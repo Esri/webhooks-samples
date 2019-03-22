@@ -32,7 +32,7 @@ node server.js
 ```
 The application will be running on **port 8001**.  You can now use this URL as your payload URL parameter.  
 
-<img src="https://devtopia.esri.com/joel9256/webhooks-samples/blob/master/images/nodeJS.gif?raw=true"> 
+<img src="../../../images/nodeJS.gif"> 
 
 Any payloads received will be written to the `response.txt` file. 
 
