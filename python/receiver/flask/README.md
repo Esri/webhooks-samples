@@ -66,7 +66,7 @@ $ python webhookListener.py
 ```
 - Now you should be able to access the Webhook receiver by visiting `https://<machine.domain.com>:5000` URL
 - You should see something similar to the screenshot below in your browser
-<img src="../../../images/WebhookListener-python.PNG" width="600"> 
+<img src="../../../images/WebhookListener-python.png" width="600"> 
 
 #### Step Four: Configure your Webhook with the Receiver URL
 Now you can use `https://<machine.domain.com>:5000` URL as your payload URL when creating your webhook
