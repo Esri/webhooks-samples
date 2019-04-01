@@ -1,5 +1,5 @@
 # Getting started with Webhooks in ArcGIS Enterprise.  
-One of the new exciting features in ArcGIS Enterprise 10.7 is the ability to create webhooks in your portal :zap::tada:.  Webhooks enable event-driven workflows, allowing you to subscribe to events in your Portal and receive a payload once that event occurs.  Our dev team will be pushing sample applications, and scripts to this repository so you can start implementing webhooks in your organization today! 
+One of the new exciting features in ArcGIS Enterprise 10.7 is the ability to create webhooks in your portal :zap::tada:.  Webhooks enable event-driven workflows, allowing you to subscribe to events in your Portal and receive a payload once that event occurs.  
 
 Before you begin, you should familiarize yourself with our [help documentation](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm) and the [ArcGIS REST API](https://developers.arcgis.com/rest/users-groups-and-items/webhooks.htm). You will find a list of event types supported at 10.7, payload properties, sample payload schemas, and so much more!
 
