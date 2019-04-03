@@ -3,10 +3,7 @@ One of the new exciting features in ArcGIS Enterprise 10.7 is the ability to cre
 
 Before you begin, you should familiarize yourself with our [help documentation](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm) and the [ArcGIS REST API](https://developers.arcgis.com/rest/users-groups-and-items/webhooks.htm). You will find a list of event types supported at 10.7, payload properties, sample payload schemas, and so much more!
 
-
-<img src="images/Webhooksdoc.gif" width="700"> 
-
-
+# Samples 
 ### Webhook Receivers
 There are a lot of great services out there like [Zapier](https://zapier.com), [Microsoft Flow](https://us.flow.microsoft.com/en-us/), and [Integromat](https://www.integromat.com) that allow you to build automated workflows with webhooks.  But if you require a more customizable workflow, or need to use webhooks in your disconnected environment then we have some great samples to get you started:
 * [Webhook receiver via Java](/java/receiver)
