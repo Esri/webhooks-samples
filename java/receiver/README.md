@@ -56,7 +56,7 @@ $ startup.bat
 - Restart tomcat
 - Now you should be able to access Webhook receiver by visiting `https://<machine.domain.com>:8443/WebhookListener` URL
 - You should be able to see something simiar to below on your browser
-<img src="../../images/WebhookListener.png" width="600"> 
+<img src="../../images/WebhookListener.PNG" width="600"> 
 
 #### Step Four: Configure your Webhook with Receiver URL
 Now you can use `https://<machine.domain.com>:8443/WebhookListener` URL as your payload URL when creating your webhook
