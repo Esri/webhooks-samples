@@ -7,7 +7,7 @@ This is a simple Java HttpServlet that can receive incoming Webhook payloads, co
 - Install Java SE Development Kit 8 or later from [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). 
 - Once installed set the JAVA_HOME environment system variable.
 - Verify Java installation by running below from a command prompt
-``` bash
+```
 C:\windows\system32> java -version
 java version "1.8.0_144"
 Java(TM) SE Runtime Environment (build 1.8.0_144-b01)
@@ -16,7 +16,12 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
 - Install Maven from [Apache](http://maven.apache.org/download.cgi)
 - Add a ```MAVEN_HOME``` environment system variables, and point it to the Maven folder
 - Add ```%MAVEN_HOME%\bin``` To PATH in system variables
-
+- Check maven version
+```
+$ mvn -v
+Apache Maven 3.6.1 (d66c9c0b3152b2e69ee9bac180bb8fcc8e6af555; 2019-04-04T12:00:29-07:00)
+Maven home: C:\apache-maven-3.6.1
+```
 #### Step Two: Install a Servlet Container like Apache Tomcat and Enable SSL/TLS
 - Install the [Tomcat](https://tomcat.apache.org) version 7 or later
 - Since we need a Webhook receiver that support https traffic and that can communicate with Portal for ArcGIS you must enable SSL/TLS on your Servlet Container. 
