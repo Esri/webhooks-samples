@@ -1,11 +1,5 @@
 watchdog
 click==6.6
-flask>=0.12.3
-itsdangerous==0.24
-Jinja2==2.8
-MarkupSafe==0.23
-pyaml==16.9.0
-pyyaml>=4.2b1
 requests>=2.20.0
 slackclient==1.0.2
 websocket-client==0.37.0
