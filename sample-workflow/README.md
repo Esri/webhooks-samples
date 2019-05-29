@@ -12,14 +12,20 @@ View our webinar (link coming soon), to see how we put this all together
 ### Step One: Install and configure ArcGIS Enterprise
 Webhooks were introduced as part of ArcGIS Enterprise 10.7.  You will need to have this installed, and have administrative access in order to continue with this sample. 
 
-### Step Two: Configure webhook receiver
+### Step Two: Clone this repository 
+All of the samples you will need are included in this repository.  Make a local copy of this repository in your environment. 
+
+### Step Three: Configure webhook receiver
 You need to begin by configuring a webhook receiver that will write payloads to a local textfile.  We used our [Java receiver sample](https://github.com/Esri/webhooks-samples/tree/master/java/receiver). 
 
-### Step Three: Python libraries
+### Step Four: Python libraries
 Python 3 will come installed with your ArcGIS Enterprise deployment.  Use this to install the [arcgis package](https://developers.arcgis.com/python/guide/install-and-set-up/)
 
-There are also a number of packages that need to be installed which can be found in [requirements.txt](/requirements.txt)
+There are also a number of packages that need to be installed which can be found in [requirements.txt](requirements.txt)
 You can quickly install these packages using the python package manager pip:
 ```pip install -r requirements.txt```
+
+### Step Five: Install Node
+You will need to have node installed in order to open a web socket that can listen to responses in Slack.  Follow the steps 
 
 ### Known limitations
