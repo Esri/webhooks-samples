@@ -18,7 +18,7 @@ You need to begin by configuring a webhook receiver that will write payloads to 
 ### Step Three: Python libraries
 Python 3 will come installed with your ArcGIS Enterprise deployment.  Use this to install the [arcgis package](https://developers.arcgis.com/python/guide/install-and-set-up/)
 
-There are also a number of packages that need to be installed which can be found in [requirements.txt]()
+There are also a number of packages that need to be installed which can be found in [requirements.txt](/requirements.txt)
 You can quickly install these packages using the python package manager pip:
 ```pip install -r requirements.txt```
 
