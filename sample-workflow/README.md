@@ -59,7 +59,7 @@ This application uses [Botkit](https://botkit.ai/docs/v0/readme-slack.html) to c
 This application opens a web socket to listen for messages directed at your slack bot. When a message is sent, the application will write the response to a text file so that it can be picked up and processed by the ```responseHandler()``` function. 
 
 4. Deploy the application using node
-The **slackBot.js** should be running in the background to allow it to pick up messages sent to the bot in slack. 
+The **slackBot.js** should be running in the background to allow it to pick up messages sent to the bot in slack. These will be written to the **response.txt** that is in the same directory as the **webhookPayload.txt** file. 
 
 The bot was given the skill to respond with "Adding tags". You can further customize this application to add new skills.  For more information, please see the following resources and tutorials for creating a chat bot with the bot.kit :
 - https://botkit.ai/docs/v0/readme-slack.html
