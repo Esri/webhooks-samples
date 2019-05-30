@@ -12,13 +12,14 @@
 # Import libraries
 import os
 
-print("Running")
+print("Listening for changes...")
 
 
 #!/usr/bin/python
 import time
 import admin_assistant
-#import debugScript
+
+#Ensure you've installed the watchdog library 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -33,7 +34,6 @@ class MyHandler(FileSystemEventHandler):
         # the response.txt file will be uploaded if a message is sent to our slack bot
         if editedFile == "/temp/webhookPayloads.txt":
             admin_assistant.slackBot()
-            #debugScript.slackBot()
         elif editedFile =="/temp/response.txt":
             admin_assistant.responseHandler()
         
