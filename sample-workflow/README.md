@@ -40,6 +40,9 @@ The script will parse through the textfile containing the payloads, extract the 
 If an item was shared to everyone, the script will then call into portal to examine the item's properties. 
 If the item's properties do not meet the requirements you have defined in the script, the slack API is used to send a message to the administrator.  You can alter this script to automatically update the missing properties, and bypass this slack component. 
 
+To send a message via Slack, you will need to create a slack application.  We followed this great tutorial to familiarize ourselves with the Slack Event API, and creating an application:
+https://github.com/slackapi/Slack-Python-Onboarding-Tutorial/blob/master/README.md#pythonboarding-bot 
+
 ```python 
 responseHandler()
 ``` 
@@ -48,4 +51,17 @@ The second function handles the response received in Slack (see the slack bot .g
 The parameters needed to run this script have been externalized in the config file.  After you have cloned this repository, and moved these files into your workspace, you will need to update these variables with the apporpriate values. 
 
 ### Step Five: Slack bot with node.js
-You will need to have node installed in order to open a web socket that can listen to responses in Slack.  Follow the steps 
+1. **Install Node.js**
+You will need to have node installed in order to open a web socket that can listen to responses in Slack.  You can follow the steps documented [here](https://github.com/Esri/webhooks-samples/tree/master/javascript/receiver/node.js) to install Node.js in your workspace. 
+2. **Install bot.kit**
+This application uses [Botkit](https://botkit.ai/docs/v0/readme-slack.html) to create the chat bot.
+3. Copy the **slackBot.js** file into your node workspace. 
+This application opens a web socket to listen for messages directed at your slack bot. When a message is sent, the application will write the response to a text file so that it can be picked up and processed by the ```responseHandler()``` function. 
+
+4. Deploy the application using node
+The **slackBot.js** should be running in the background to allow it to pick up messages sent to the bot in slack. 
+
+The bot was given the skill to respond with "Adding tags". You can further customize this application to add new skills.  For more information, please see the following resources and tutorials for creating a chat bot with the bot.kit :
+- https://botkit.ai/docs/v0/readme-slack.html
+- https://chatbotslife.com/create-slack-bot-using-botkit-in-10-minutes-332956d6177d
+- https://api.slack.com/tutorials/easy-peasy-slash-commands
