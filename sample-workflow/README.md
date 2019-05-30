@@ -24,6 +24,8 @@ All of the samples you will need are included in this repository.  Make a local 
 ### Step Three: Configure webhook receiver
 You need to begin by configuring a webhook receiver that will write payloads to a local textfile.  We used our [Java receiver sample](https://github.com/Esri/webhooks-samples/tree/master/java/receiver). 
 
+Once you have configured your webhook receiver, go ahead and create your webhook with your desired trigger events. 
+
 ### Step Four: Python Scripts
 Python 3 will come installed with your ArcGIS Enterprise deployment.  
 1. Use this to install the [arcgis package](https://developers.arcgis.com/python/guide/install-and-set-up/)
