@@ -1,20 +1,22 @@
- """  Copyright 2019 Esri
+'''
+Copyright 2019 Esri
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
-   http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
-   limitations under the License. """
+   limitations under the License.
+'''
 
 ################################################################################
 ##            	  Slack Assistant             
-#                 Nalika & Joel  - 02/26/2019
+#                 Nalika & Joel  - 05/29/2019
 #
 #   This script reads a textfile that is being written to by
-#   a Java servlet, recieved payloads from Portal. It goes through
+#   a Java servlet, after it has recieved payloads from Portal. It goes through
 #   the event and looks for events where an item has been shared to
 #   the public.  If it finds an item, then it calls back into Portal
 #   to check if the item has the appropriate tags, description, completeness score
@@ -36,13 +38,13 @@ def slackBot():
     from slackclient import SlackClient   # pip install slackclient 
     slack = SlackClient(slackToken)
     
-	# Set path to folder where webhookPayloads.txt file is being written to (based on java application)
+    # Set path to folder where webhookPayloads.txt file is being written to (based on java application)
     os.chdir('c:\\temp')
 
     # Open textfile in read mode
     textFile = open("webhookPayloads.txt","r+")
 	
-	# Run if the textfile has something 
+    # Run if the textfile has something 
     if os.stat("c:\\temp\\webhookPayloads.txt").st_size>0:
 
         # String formatting
@@ -58,7 +60,11 @@ def slackBot():
 
 
         ###########################################
-        ##   Convert textfile lines to JSON items
+        ##  Step One:
+        ##   -Convert textfile lines to JSON items
+        ##   -Then parse through data
+        ##   -Determine what type of operation
+        ##   triggered the webhook
         ###########################################
 
         # Set path to grab webhookPayloads.txt file
@@ -101,8 +107,6 @@ def slackBot():
         print("...")
         gis = GIS(portalURL, portalUsername, portalPassword)
         print("Parsing through events...")
-                    
-            #textFile.truncate(0)
 
         descriptionText = ""
         itemScoreText = ""
@@ -111,6 +115,7 @@ def slackBot():
 
         # Loop through each event to examine the payload
         for event in jsonEvents:
+            
             # Find out what kind of operation it was
             operation = event['events'][0]['operation']
             user = event['events'][0]['username']
@@ -120,6 +125,13 @@ def slackBot():
             if operation =="share":
                 # If so, who was it shared to?
                 sharedTo = event['events'][0]['properties'].get("sharedToGroups")
+
+                ###########################################
+                ##  Step Two:
+                ##   -If the item was shared to everyone,
+                ##   then check the item's properties. 
+                ###########################################
+                
                 # While that item is shared to everyone, then process this event
                 if sharedTo[0] == "Everyone":
                     # Score to decide if the item should be shared to the public
@@ -162,9 +174,6 @@ def slackBot():
                     print("Check #2: Description")
                     print("-----------------------")
 
-                    # Check the description length
-
-
                     try:
 
                         if len(sharedItem.description)<30:
@@ -189,11 +198,17 @@ def slackBot():
                     print("FINAL VERDICT")
                     print("-----------------------------")
 
-                    # Check the final score of the item
+                    # Check the final score of the item, to determine whether the item was ready to be shared publicly or not. 
                     if score<1:
                         print("This item is not ready to be shared to the public.  See results above.\n")
 
-                        #Alert Slack channel
+                        ###########################################
+                        ##  Step Three:
+                        ##   - Alert the Slack channel, using Slack's
+                        ##    API
+                        ##   - This is how the initial message from
+                        ##     the bot is constructed. 
+                        ###########################################
 
                         slack.api_call(
                         "chat.postMessage",
@@ -229,7 +244,6 @@ def slackBot():
                                 }],
                         reply_broadcast=True
                          )
-                        #textFile.truncate(0)
 
                     else:
                         print("Item was successfully shared to the public, and meets all requirements\n")
@@ -238,6 +252,12 @@ def slackBot():
 
     else:
         print("Text file empty")
+
+
+# This function is called only when a response is received in Slack.  The response will be
+# written to a textfile, which will include the actions the user would like to take.
+# Alternatively, you can edit the function above to automatically update the tags without requiring a
+# response from the user in slack.
 
 def responseHandler():
 
@@ -266,6 +286,7 @@ def responseHandler():
     response = slackFile.readlines()
     response = response[0]
     response = response.rstrip('\n')
+    
     #Is it the unshare command
     testResponse1 = response[:12]
 
