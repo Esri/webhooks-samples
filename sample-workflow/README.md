@@ -5,6 +5,7 @@ The following sample can be used as a guide to create an end to end workflow tha
 As an administrator, I want to be notified any time an item is incorrectly shared to the public.  If an item is shared publicly, I want to examine that item's properties to ensure that it meets our organization standards (complete tags, description, completeness score, thumbnail etc.).  If it does not meet our standards, notify me in slack and allow me to respond and manage that item within slack. 
 
 **Demo components:**
+
 <img src="../images/workflow.PNG"> 
 
 **Slack bot:**
