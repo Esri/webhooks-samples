@@ -39,7 +39,7 @@ https.createServer(options, (req, res) => {
 		res.end('{"success":"true"}');		
 		//write to a file
 		  fs.open('C:\\temp\\webhookPayloads.txt', 'a', 666, function( e, id ) {
-			fs.write( id, message.text+'\n', null, 'utf8', function(){
+			fs.write( id, JSON.stringify(JSON.parse(body.trim()))+'\n', null, 'utf8', function(){
     fs.close(id, function(){
       console.log('file closed');
     });
