@@ -30,7 +30,10 @@ Go to your command prompt and launch the application:
 cd <application's path>
 node server.js
 ```
-The application will be running on **port 8001**.  You can now use this URL as your payload URL parameter.  
+The application will be running on **port 8000**.  You can now use this URL as your payload URL parameter. **Note**: If the server refuses to start with an error `Cannot find module node-fqdn`, from the command window, install the required module and try to start the server again: 
+```
+npm install node-fqdn
+```
 
 <img src="../../../images/nodeJS.gif"> 
 
