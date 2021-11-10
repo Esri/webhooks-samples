@@ -4,11 +4,13 @@ This is a simple Python Flask web server that can receive incoming Webhook paylo
 Note : This guide assumes that Python version 3 on Windows 10. You can follow this web site [Flask Web server](https://projects.raspberrypi.org/en/projects/python-web-server-with-flask/2)  for more info.
 
 #### Step One: Install Python and modules
-- Install [Python 3](www.python.org/downloads) 
+- Install [Python 3](https://www.python.org/downloads) 
 
-- Install Python modules with pip
+- Install the required Python modules with pip
 
 `pip install flask`
+
+`pip install pyOpenSSL`
 
 Begin by importing libraries:
 
