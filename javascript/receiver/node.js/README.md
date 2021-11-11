@@ -37,7 +37,7 @@ npm install node-fqdn
 
 <img src="../../../images/nodeJS.gif"> 
 
-Any payloads received will be written to the `response.txt` file. 
+Any payloads received will be written to the `webhookPayloads.txt` file in `c:\temp` as well as the console running the server. 
 
 #### Now what?
 Well that's up to you!  Extend this application to parse through the incoming JSON, and look for specific operations or items.  Tie this into your existing workflows and processes that rely on key events in portal to take place.  
