@@ -4,7 +4,7 @@ This is a simple Java HttpServlet that can receive incoming Webhook payloads, co
 **Note : This guide assumes that servlet container is Apache Tomcat version 9 and Java SE Development Kit version 8 on Windows 10.**
 
 #### Step One: Install Java SE Development Kit 8 or later and Maven 
-- Install Java SE Development Kit 8 or later from [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). 
+- Install Java SE Development Kit 8 or later from [Oracle](https://www.oracle.com/java/technologies/downloads/#jdk17-windows). 
 - Once installed set the JAVA_HOME environment system variable.
 - Verify Java installation by running below from a command prompt
 ```
@@ -33,13 +33,13 @@ $ startup.bat
 ```
 
 #### Step Three: Clone or download this repository, compile and run
-- Clone or downalod this repository. Let's assume that you have cloned to C:\ dir
+- Download this repository. Let's assume that you have cloned to C:\ dir
 
 `git clone git@github.com:Esri/webhooks-samples.git`
 
 - Compile java class :
 ```
-cd C:\webhooks-samples\java\receiver
+cd C:\webhooks-samples\developer\java\
 $ mvn clean install
 ```
 - Once compiled go to `target\classes` folder and copy `WebhookListener.class`
@@ -68,7 +68,7 @@ $ mvn clean install
 ```
 - Restart tomcat
 - Now you should be able to access Webhook receiver by visiting `https://<machine.domain.com>:8443/WebhookListener` URL
-- You should be able to see something simiar to below on your browser
+- You should be able to see something similar to below on your browser
 <img src="../../images/WebhookListener.PNG" width="600"> 
 
 #### Step Four: Configure your Webhook with Receiver URL

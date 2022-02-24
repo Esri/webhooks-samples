@@ -6,11 +6,11 @@ As an administrator, I want to be notified any time an item is incorrectly share
 
 **Demo components:**
 
-<img src="../images/workflow.PNG"> 
+<img src="../../images/workflow.PNG"> 
 
 **Slack bot:**
 
-<img src="../images/slackBot.gif" width="600"> 
+<img src="../../images/slackBot.gif" width="600"> 
 
 ## How to deploy
 View our webinar (link coming soon), to see how we put this all together.
@@ -55,7 +55,7 @@ The parameters needed to run this script have been externalized in the config fi
 
 ### Step Five: Slack bot with node.js
 1. **Install Node.js**
-You will need to have node installed in order to open a web socket that can listen to responses in Slack.  You can follow the steps documented [here](https://github.com/Esri/webhooks-samples/tree/master/javascript/receiver/node.js) to install Node.js in your workspace. 
+You will need to have node installed in order to open a web socket that can listen to responses in Slack. You can follow the steps documented [here](https://github.com/Esri/webhooks-samples/tree/master/javascript/receiver/node.js) to install Node.js in your workspace. 
 2. **Install bot.kit**
 This application uses [Botkit](https://botkit.ai/docs/v0/readme-slack.html) to create the chat bot.
 3. Copy the **slackBot.js** file into your node workspace. 
@@ -64,7 +64,7 @@ This application opens a web socket to listen for messages directed at your slac
 4. Deploy the application using node
 The **slackBot.js** should be running in the background to allow it to pick up messages sent to the bot in slack. These will be written to the **response.txt** that is in the same directory as the **webhookPayload.txt** file. 
 
-The bot was given the skill to respond with "Adding tags". You can further customize this application to add new skills.  For more information, please see the following resources and tutorials for creating a chat bot with the bot.kit :
+The bot was given the skill to respond with "Adding tags". You can further customize this application to add new skills. For more information, please see the following resources and tutorials for creating a chat bot with the bot.kit :
 - https://botkit.ai/docs/v0/readme-slack.html
 - https://chatbotslife.com/create-slack-bot-using-botkit-in-10-minutes-332956d6177d
 - https://api.slack.com/tutorials/easy-peasy-slash-commands

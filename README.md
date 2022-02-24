@@ -1,36 +1,66 @@
-# Getting started with Webhooks in ArcGIS Enterprise.  
-One of the new exciting features in ArcGIS Enterprise 10.7 is the ability to create webhooks in your portal :zap::tada:.  Webhooks enable event-driven workflows, allowing you to subscribe to events in your Portal and receive a payload once that event occurs.  
+# Getting started with Webhooks
+A webhook is generally regarded as an application that will send a notification when an event occurs. The key here, an event and the occurring action differs from web applications that must reach out and make requests to other applications. In the ArcGIS world, webhooks are a powerful mechanism that facilitate automation by allowing discrete tasks to be chained together. Think of an important business problem: I need to know when a new row is created in my table. Or, more clearly defined in the ArcGIS world: Send me an email when someone completes a survey. The alternative would require an individual to go and manually check a feature service or write a script to periodically poll a RESTful service. Webhooks are the piece between the feature service action (new record) and the notification email.
+Webhooks were first introduced to Survey123 in 2018, followed closely by Portal webhooks (ArcGIS Enterprise 10.7) in 2019 and most recently, ArcGIS Online Hosted Feature Services introduced support in 2020. We plan on adding more webhook support within ArcGIS Enterprise in the near term.
 
-Before you begin, you should familiarize yourself with our [help documentation](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm) and the [ArcGIS REST API](https://developers.arcgis.com/rest/users-groups-and-items/webhooks.htm). You will find a list of event types supported at 10.7, payload properties, sample payload schemas, and so much more!
+The best place to start learning about webhooks within ArcGIS products is the official help.
+* [Portal](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm)
+* [Portal (REST)](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm)
+* [Survey123](https://doc.arcgis.com/en/survey123/browser/create-surveys/webhooks.htm)
+* [ArcGIS Online Hosted Feature Services](https://developers.arcgis.com/rest/services-reference/online/web-hooks-feature-service-.htm)
 
-# Samples 
-### Webhook Receivers
-There are a lot of great services out there like [Zapier](https://zapier.com), [Microsoft Flow](https://us.flow.microsoft.com/en-us/), and [Integromat](https://www.integromat.com) that allow you to build automated workflows with webhooks.  But if you require a more customizable workflow, or need to use webhooks in your disconnected environment then we have some great samples to get you started:
-* [Webhook receiver via Java](/java/receiver)
-* [Webhook receiver via Python](/python/receiver/flask) 
-* [Webhook receiver via Node.js](/javascript/receiver/node.js)
+This repository will focus on the resources required to complete your automation using webhooks. Some consider implementing a webhook to be a "developer" task. Setting up a custom server to listen for webhook calls could  certainly be considered a developer task, however many websites offer low to no-code solutions that listen for webhook messages. If you're familiar with ModelBuilder or Visio, setting up a webhook on these websites will feel familiar. 
+
+# Samples to get your started
+Within this repository are starter samples. They have been grouped into [Developer](/Developer) and [3rd Party](/3rdParty). You'll probably choose a commercial vendor or custom solution based on your business requirements. If you are still in the testing or experimentation stage of webhook development, check the [developer readme](/Developer/README.md) for websites that offer quick, session based receivers that listen for webhook payloads.
+
+
+### Custom Receivers
+Deploying a custom receiver (HTTP Server) is a good option for responding to webhooks if any of the following are true:
+* You have the hardware to run a dedicated server
+* You have the technical expertise to develop and maintain a custom server
+* You need to keep communications within your network
+* Your business needs require a custom solution not offered by an existing vendor
+
+The following receivers are grouped by programming language. The result of each is pretty much the same, a basic server than listens on a given port and writes the incoming payload to a text file. In practice, you will need to enhance the server to fulfil your business need; perhaps [sending an email](/sample-workflows/python-email) after receiving a particular message.
+* [Webhook receiver via Node.js](/javascript/node.js)
+* [Webhook receiver via Python](/Developer/python/flask) 
+* [Webhook receiver via Java](/Developer/java)
+* [Webhook receiver via Azure](/Developer/azure/function.python) - Cloud based receiver written in Python
+* [Webhook receiver via ArcGIS Notebook Server](/Developer/notebookserver)
+
+### 3rd Party (Commercial) Receivers
+Many websites offer free, low cost or subscription based services that you can quickly get started. We don't recommended one vendor over another; based on your business requirements you can evaluate each vendor and choose the one who best fits your needs. The following list represents just some of the 3rd party websites you can explore and leverage. For each of the providers below, we describe how to get started and provide samples or templates (if appropriate).
+* [IFTTT](/3rdParty/IFTTT)
+* [Make (previously Integromat)](/3rdParty/Make) 
+* [Microsoft Power Automate (previously Flow)](/3rdParty/PowerAutomate)
+* [Tray.IO](/3rdParty/Tray.IO)
+* [Zapier](/3rdParty/Zapier)
+
 
 ### Workflow samples
-Check out this [awesome demo](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dev-summit-2019/) that was given at the 2019 Developer Summit. Learn how the team used webhooks to call an AWS lambda to execute code in a serverless computation engine.  
+Explore some of the more [complete "end to end" examples](/sample-workflows). These are a mix of 3rd party and custom solutions that might provide a jump start or just give you an idea on how to accomplish your task.
+* [Using an AWS Lambda function](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dev-summit-2019/) (Blog + Video)
+* [Slack bot notifies new items with incomplete metadata](/sample-workflows/slack)
+* [A Python Flask server to send emails](/sample-workflows/python-email)
 
-We also plan to post some sample scripts so you can start incorporating webhooks into your organizations.  For instance, writing up a slack bot to notify you any time an item with incomplete metadata is shared to the public:
-
-<img src="images/slackBot.gif" width="600"> 
-
-Or how about using webhooks to help administer the collaborations in your organization.  There is so much you can do with webhooks, and the list of events you can subscribe to is only going to grow from here!  We look forward to seeing what you come up with :smile:
-
+ 
 ## Resources
 
-* [Portal Admin documentation](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm)
-* [ArcGIS REST API](https://developers.arcgis.com/rest/users-groups-and-items/webhooks.htm)
-* [Blog (Coming soon)]()
+* [Webhooks - Don't call us, we'll call you (Portal - blog)](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dont-call-us-well-call-you/)
+* [Using Webhooks in ArcGIS Enterprise (Portal - video)](https://www.esri.com/videos/watch?videoid=aX4VhaonTFg&title=using-webhooks-in-arcgis-enterprise)
+* [Create a hosted feature service webhook (blog)](https://www.esri.com/arcgis-blog/products/arcgis-online/sharing-collaboration/how-to-create-a-hosted-feature-service-webhook/)
+* [Getting Started with Hosted Feature Layer Webhooks (video)](https://www.esri.com/videos/watch?videoid=D9PMC2yGJbA&title=getting-started-with-hosted-feature-layer-webhooks)
+* [Use webhooks to automate workflows in ArcGIS Field Maps with Power Automate (Feature Service - blog)](https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/use-webhooks-to-automate-workflows-in-arcgis-field-maps-with-power-automate/)
+* [Create ArcGIS Workflow Manager Jobs Using Survey123 Webhooks (blog)](https://www.esri.com/arcgis-blog/products/workflow-manager/field-mobility/create-arcgis-workflow-manager-jobs-using-survey123-webhooks/)
+* [Use webhooks to automate workflows in ArcGIS Field Maps (Feature Service - blog)](https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/use-webhooks-to-automate-workflows-in-arcgis-field-maps/)
+
 
 ## Issues
 
-Find a bug or want to request a new feature?  Please let us know by submitting an issue.
+Find a bug? Does a sample require more information? Do you have another resource to suggest? Please let us know by submitting an [issue](https://github.com/Esri/webhooks-samples/issues).
 
 ## License
-Copyright 2019 Esri
+Copyright 2019 - 2022 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

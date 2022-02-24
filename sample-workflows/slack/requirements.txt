@@ -1,0 +1,5 @@
+watchdog
+click==6.6
+requests>=2.20.0
+slackclient==1.0.2
+websocket-client==0.37.0

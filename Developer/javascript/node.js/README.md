@@ -8,7 +8,7 @@ Once installed, you can confirm the version by typing `node -v` in your command 
 
 
 #### Step Two: Clone or download this repository
-Once you have cloned/downaloded this repository, you will want to copy the `server.js` into your  **main folder**.  
+Once you have downloaded this repository, you will want to copy the `server.js` into your  **main folder**.  
 
 
 #### Step Three: Obtain your certificate and update server.js
@@ -21,7 +21,6 @@ const options = {
   passphrase: 'certificate password'
 };
 ```
-Save the file and you are ready to go! 
 
 
 #### Step Four: Launch your receiver
@@ -39,5 +38,3 @@ npm install node-fqdn
 
 Any payloads received will be written to the `webhookPayloads.txt` file in `c:\temp` as well as the console running the server. 
 
-#### Now what?
-Well that's up to you!  Extend this application to parse through the incoming JSON, and look for specific operations or items.  Tie this into your existing workflows and processes that rely on key events in portal to take place.  
