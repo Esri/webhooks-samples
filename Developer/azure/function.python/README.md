@@ -15,24 +15,24 @@ Before attempting to deploy the Azure function, you'll need to setup your enviro
 2. Install [VS Code](https://code.visualstudio.com/Download)
 3. Install [Azure Function Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash#install-the-azure-functions-core-tools)
 4. VS Code [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) (from market place)
- * Select the Python interpreter you installed in step 1
+    Select the Python interpreter you installed in step 1
 5. VS Code [Azure Functions Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) (from market place)
 
 #### Deploy Function
 
-The code from the repistory should be copied to an indpendent folder outside this repistory as multiple Azure Functions exist. 
+The code from the repository should be copied to an independent folder outside this repository as multiple Azure Functions exist. 
 
 1. From VS Code, select **File** > **Open Folder** and select the location of the copied Function. **Trust** the folder to proceed.
 2. If you receive a message informing about a failed virtual environment, create a new one and select your Python interpreter.
 
-You can test the function locally by pressing **F5**. Once ready, the receiver will be available at `http://localhost:7071/api/Hook`
+    You can test the function locally by pressing **F5**. Once ready, the receiver will be available at `http://localhost:7071/api/Hook`
 
 3. Select the **Azure** extension (`shift-alt-a`) and **Sign in to Azure** or **Create a free trail**
 4. Expand **Local Project** > **Functions** and verify that the **Hook** function exists. The function is an anonymous httpTrigger.
 5. Click the Function deploy button on the Azure extension (cloud with up arrow) and select **Create a new function app in azure advanced**
 6. Provide a unique name. The name will be used within the URL of your receiver.
 
-  eg. `https://NAME.azurewebsites.net/api/hook`
+    eg. `https://NAME.azurewebsites.net/api/hook`
 
 7. Select a runtime. (Match the version of Python installed)
 8. Create a new or select an existing resource group
