@@ -42,7 +42,7 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
 * [Using an AWS Lambda function](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dev-summit-2019/) (Blog + Video)
 * [Slack bot notifies new items with incomplete metadata](/sample-workflows/slack)
 * [A Python Flask server to send emails](/sample-workflows/python-email)
-
+* [Write payloads from an Azure Function to an Azure Table storage](/sample-workflows/azure-write-table)
  
 ## Resources
 
