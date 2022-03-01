@@ -1,5 +1,5 @@
 # Getting started with Webhooks
-A webhook is generally regarded as an application that will send a notification when an event occurs. The key here, an event and the occurring action differs from web applications that must reach out and make requests to other applications. In the ArcGIS world, webhooks are a powerful mechanism that facilitate automation by allowing discrete tasks to be chained together. Think of an important business problem: I need to know when a new row is created in my table. Or, more clearly defined in the ArcGIS world: Send me an email when someone completes a survey. The alternative would require an individual to go and manually check a feature service or write a script to periodically poll a RESTful service. Webhooks are the piece between the feature service action (new record) and the notification email.
+A webhook is generally regarded as an application that will send a notification when an event occurs. The key here, is an event and the occurring action differs from web applications that must reach out and make requests to other applications. In the ArcGIS world, webhooks are a powerful mechanism that facilitates automation by allowing discrete tasks to be chained together. Think of an important business problem: I need to know when a new row is created in my table. Or, more clearly defined in the ArcGIS world: Send me an email when someone completes a survey. The alternative would require an individual to go and manually check a feature service or write a script to periodically poll a RESTful service. Webhooks are the piece between the feature service action (new record) and the notification email.
 Webhooks were first introduced to Survey123 in 2018, followed closely by Portal webhooks (ArcGIS Enterprise 10.7) in 2019 and most recently, ArcGIS Online Hosted Feature Services introduced support in 2020. We plan on adding more webhook support within ArcGIS Enterprise in the near term.
 
 The best place to start learning about webhooks within ArcGIS products is the official help.
@@ -10,8 +10,8 @@ The best place to start learning about webhooks within ArcGIS products is the of
 
 This repository will focus on the resources required to complete your automation using webhooks. Some consider implementing a webhook to be a "developer" task. Setting up a custom server to listen for webhook calls could  certainly be considered a developer task, however many websites offer low to no-code solutions that listen for webhook messages. If you're familiar with ModelBuilder or Visio, setting up a webhook on these websites will feel familiar. 
 
-# Samples to get your started
-Within this repository are starter samples. They have been grouped into [Developer](/Developer) and [3rd Party](/3rdParty). You'll probably choose a commercial vendor or custom solution based on your business requirements. If you are still in the testing or experimentation stage of webhook development, check the [developer readme](/Developer/README.md) for websites that offer quick, session based receivers that listen for webhook payloads.
+# Samples to get you started
+Within this repository are starter samples. They have been grouped into [Developer](/Developer) and [3rd Party](/3rdParty). You'll probably choose a commercial vendor or custom solution based on your business requirements. If you are still in the testing or experimentation stage of webhook development, check the [developer readme](/Developer/README.md) for websites that offer quick, session-based receivers that listen for webhook payloads.
 
 
 ### Custom Receivers
@@ -21,15 +21,15 @@ Deploying a custom receiver (HTTP Server) is a good option for responding to web
 * You need to keep communications within your network
 * Your business needs require a custom solution not offered by an existing vendor
 
-The following receivers are grouped by programming language. The result of each is pretty much the same, a basic server than listens on a given port and writes the incoming payload to a text file. In practice, you will need to enhance the server to fulfil your business need; perhaps [sending an email](/sample-workflows/python-email) after receiving a particular message.
+The following receivers are grouped by programming language. The result of each is pretty much the same, a basic server that listens on a given port and writes the incoming payload to a text file. In practice, you will need to enhance the server to fulfill your business need; perhaps [sending an email](/sample-workflows/python-email) after receiving a particular message.
 * [Webhook receiver via Node.js](/javascript/node.js)
 * [Webhook receiver via Python](/Developer/python/flask) 
 * [Webhook receiver via Java](/Developer/java)
-* [Webhook receiver via Azure](/Developer/azure/function.python) - Cloud based receiver written in Python
+* [Webhook receiver via Azure](/Developer/azure/function.python) - Cloud-based receiver written in Python
 * [Webhook receiver via ArcGIS Notebook Server](/Developer/notebookserver)
 
 ### 3rd Party (Commercial) Receivers
-Many websites offer free, low cost or subscription based services that you can quickly get started. We don't recommended one vendor over another; based on your business requirements you can evaluate each vendor and choose the one who best fits your needs. The following list represents just some of the 3rd party websites you can explore and leverage. For each of the providers below, we describe how to get started and provide samples or templates (if appropriate).
+Many websites offer free, low cost or subscription-based services that you can quickly get started. We don't recommend one vendor over another; based on your business requirements you can evaluate each vendor and choose the one who best fits your needs. The following list represents just some of the 3rd party websites you can explore and leverage. For each of the providers below, we describe how to get started and provide samples or templates (if appropriate).
 * [IFTTT](/3rdParty/IFTTT)
 * [Make (previously Integromat)](/3rdParty/Make) 
 * [Microsoft Power Automate (previously Flow)](/3rdParty/PowerAutomate)

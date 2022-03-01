@@ -1,5 +1,5 @@
 # Creating a webhook receiver with Node.js
-[Node.js](https://nodejs.org/en/about/) is a Javascript runtime that allows you to quickly build and deploy web applications.  We will be using Node.js to deploy a simple application that listens on a local port for POST requests (our webhook payloads), and then writes those payloads to a textfile on disk.  
+[Node.js](https://nodejs.org/en/about/) is a JavaScript runtime that allows you to quickly build and deploy web applications.  We will be using Node.js to deploy a simple application that listens on a local port for POST requests (our webhook payloads), and then writes those payloads to a textfile on disk.  
 
 #### Step One: Install Node.js
 Before you begin, ensure you have installed [Node.js](https://nodejs.org/dist/latest-v8.x/) **version 8.x** :point_left:  

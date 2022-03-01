@@ -51,7 +51,7 @@ responseHandler()
 ``` 
 The second function handles the response received in Slack (see the slack bot .gif above).  Using the tags given in the response, the item is updated accordingly. This component requires creating a node.js application that is listening to the slack channel (see below). 
 5. **config.py**
-The parameters needed to run this script have been externalized in the config file.  After you have cloned this repository, and moved these files into your workspace, you will need to update these variables with the apporpriate values. 
+The parameters needed to run this script have been externalized in the config file.  After you have cloned this repository, and moved these files into your workspace, you will need to update these variables with the appropriate values. 
 
 ### Step Five: Slack bot with node.js
 1. **Install Node.js**
