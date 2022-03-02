@@ -13,6 +13,8 @@ This repository will focus on the resources required to complete your automation
 # Samples to get you started
 Within this repository are starter samples. They have been grouped into [Developer](/Developer) and [3rd Party](/3rdParty). You'll probably choose a commercial vendor or custom solution based on your business requirements. If you are still in the testing or experimentation stage of webhook development, check the [developer readme](/Developer/README.md) for websites that offer quick, session-based receivers that listen for webhook payloads.
 
+- Download the entire repository. From the **Code** button near the top, **Download Zip** or using git tools: `git clone git@github.com:Esri/webhooks-samples.git`
+
 
 ### Custom Receivers
 Deploying a custom receiver (HTTP Server) is a good option for responding to webhooks if any of the following are true:
