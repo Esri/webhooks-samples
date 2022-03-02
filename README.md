@@ -24,7 +24,7 @@ Deploying a custom receiver (HTTP Server) is a good option for responding to web
 * Your business needs require a custom solution not offered by an existing vendor
 
 The following receivers are grouped by programming language. The result of each is pretty much the same, a basic server that listens on a given port and writes the incoming payload to a text file. In practice, you will need to enhance the server to fulfill your business need; perhaps [sending an email](/sample-workflows/python-email) after receiving a particular message.
-* [Webhook receiver via Node.js](/javascript/node.js)
+* [Webhook receiver via Node.js](Developer/javascript/node.js)
 * [Webhook receiver via Python](/Developer/python/flask) 
 * [Webhook receiver via Java](/Developer/java)
 * [Webhook receiver via Azure](/Developer/azure/function.python) - Cloud-based receiver written in Python

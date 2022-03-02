@@ -3,19 +3,19 @@ These samples, presented by programming language, provide a quick start for deve
 
 **Note**: ArcGIS Portal webhooks require a secure receiver, running under HTTP**S**. ArcGIS Online Hosted Feature services can be configured to use a non-secure server. However, you should strongly consider implementing HTTPS. The sample servers listed below may require additional configuration from your IT department before they can run securely.
 
-### [Azure Function](/azure)
+### [Azure Function](/Developer/azure/function.python)
 Azure Functions run serverless code in the cloud. This sample is written in Python, however, an Azure Function can be written in many different languages (C#, JavaScript, F#, Java, PowerShell, TypeScript). This sample logs incoming requests to the Function log stream (payloads are not persisted anywhere).
 
-### [Java](/java)
+### [Java](/Developer/java)
 This sample requires both a [JDK](https://www.oracle.com/java/technologies/downloads/) (Java Developer Kit) and [Maven](https://maven.apache.org/download.cgi). The sample writes incoming payloads to a text file.
 
-### [JavaScript](/javascript)
+### [JavaScript](/Developer/javascript/node.js)
 There are many JavaScript servers. This example uses [Node.js](https://nodejs.org/en/) and makes use of *https*, *fs* and *node-fqdn* modules to listen and write incoming payloads to a text file.
 
-### [Python](/python)
+### [Python](/Developer/python/flask)
 The Python module, Flask runs a webserver that can listen for GET and POST calls. This example writes the incoming payload to a text file.
 
-### [Notebook Server](/notebookserver)
+### [Notebook Server](/Developer/notebookserver)
 ArcGIS Notebook Server can be used as a receiver to Portal webhooks.
 
 ## Single Session Testing
