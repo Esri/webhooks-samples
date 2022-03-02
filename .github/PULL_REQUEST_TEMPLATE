@@ -1,0 +1,9 @@
+
+We welcome fixes, suggestions and samples.
+
+### New sample or workflow
+If you're providing a sample, please include:
+[] readme.md
+[] Project contained to a relevant folder inside either **3rdParty**, **Developer** or **sample-workflows** folder
+[] Update the readme of the parent folder to link to your sample
+[] Ensure your project does not include compiled code or copywritted material
