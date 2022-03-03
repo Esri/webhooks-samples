@@ -1,10 +1,10 @@
 # Getting started with Webhooks
 A webhook is generally regarded as an application that will send a notification when an event occurs. This is different from applications that must make a request and *ask* if an event has occurred. The difference is subtle, but the webhook scenario quickly notifies you instead of having your application constantly poll. In the ArcGIS world, webhooks are a powerful mechanism that facilitates automation by allowing discrete tasks to be chained together. Consider a classic business problem: I need to know when a new row is created in my table. Or, specifically, in the ArcGIS world: Send me an email when someone completes a survey. The classic polling scenario would require an individual to go and manually check a feature service or write a script to periodically query a RESTful service. Webhooks are the piece between the feature service action (new record) and the notification email, happening almost as soon as the new survey was submitted.
-Webhooks were first introduced to Survey123 in 2018, followed closely by Portal webhooks (ArcGIS Enterprise 10.7) in 2019 and most recently, ArcGIS Online Hosted Feature Services introduced support in 2020. We plan on adding more webhook support within ArcGIS Enterprise in the near term.
+Webhooks were first introduced to ArcGIS Survey123 in 2018, followed closely by ArcGIS Enterprise 10.7 with portal-level webhooks (item, user, group events) in 2019 and most recently, ArcGIS Online Hosted Feature Services introduced support in 2020. We plan on adding more webhook support within ArcGIS Enterprise in the near term.
 
 The best place to start learning about webhooks within ArcGIS products is the official help.
-* [Portal](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm)
-* [Portal (REST)](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm)
+* [ArcGIS Enterprise](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm)
+* [ArcGIS Enterprise (REST)](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm)
 * [Survey123](https://doc.arcgis.com/en/survey123/browser/create-surveys/webhooks.htm)
 * [ArcGIS Online Hosted Feature Services](https://developers.arcgis.com/rest/services-reference/online/web-hooks-feature-service-.htm)
 
@@ -48,10 +48,10 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
  
 ## Resources
 
-* [Webhooks - Don't call us, we'll call you (Portal - blog)](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dont-call-us-well-call-you/)
-* [Using Webhooks in ArcGIS Enterprise (Portal - video)](https://www.esri.com/videos/watch?videoid=aX4VhaonTFg&title=using-webhooks-in-arcgis-enterprise)
-* [Create a hosted feature service webhook (blog)](https://www.esri.com/arcgis-blog/products/arcgis-online/sharing-collaboration/how-to-create-a-hosted-feature-service-webhook/)
-* [Getting Started with Hosted Feature Layer Webhooks (video)](https://www.esri.com/videos/watch?videoid=D9PMC2yGJbA&title=getting-started-with-hosted-feature-layer-webhooks)
+* [Webhooks - Don't call us, we'll call you (ArcGIS Enterprise - blog)](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dont-call-us-well-call-you/)
+* [Using Webhooks in ArcGIS Enterprise (ArcGIS Enterprise - video)](https://www.esri.com/videos/watch?videoid=aX4VhaonTFg&title=using-webhooks-in-arcgis-enterprise)
+* [Create a hosted feature service webhook (ArcGIS Online - blog)](https://www.esri.com/arcgis-blog/products/arcgis-online/sharing-collaboration/how-to-create-a-hosted-feature-service-webhook/)
+* [Getting Started with Hosted Feature Layer Webhooks (ArcGIS Online - video)](https://www.esri.com/videos/watch?videoid=D9PMC2yGJbA&title=getting-started-with-hosted-feature-layer-webhooks)
 * [Use webhooks to automate workflows in ArcGIS Field Maps with Power Automate (Feature Service - blog)](https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/use-webhooks-to-automate-workflows-in-arcgis-field-maps-with-power-automate/)
 * [Create ArcGIS Workflow Manager Jobs Using Survey123 Webhooks (blog)](https://www.esri.com/arcgis-blog/products/workflow-manager/field-mobility/create-arcgis-workflow-manager-jobs-using-survey123-webhooks/)
 * [Use webhooks to automate workflows in ArcGIS Field Maps (Feature Service - blog)](https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/use-webhooks-to-automate-workflows-in-arcgis-field-maps/)
