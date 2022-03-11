@@ -9,3 +9,8 @@ The samples listed here attempt to offer an almost complete workflow. With a few
 
 
 ### [Post item metadata to a Slack channel after parsing with the Python API](/sample-workflows/slack)
+
+### Blogs
+* [Using AWS Lambda to send an email from new Survey123 submissions](https://www.esri.com/arcgis-blog/products/survey123/developers/integrating-arcgis-survey123-with-aws-lambda/) - [Github code](https://github.com/tatornator12/AWS-Lambda-ArcGIS-Examples)
+
+* [Using Azure Functions to send an email from new Survey123 submissions](https://www.esri.com/arcgis-blog/products/api-python/developers/integrating-the-arcgis-api-for-python-and-survey123-with-azure-functions/) - [Github code](https://github.com/tatornator12/Azure-Functions-ArcGIS-Examples)
