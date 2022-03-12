@@ -12,6 +12,9 @@ This sample requires both a [JDK](https://www.oracle.com/java/technologies/downl
 ### [JavaScript](/Developer/javascript/node.js)
 There are many JavaScript servers. This example uses [Node.js](https://nodejs.org/en/) and makes use of *https*, *fs* and *node-fqdn* modules to listen and write incoming payloads to a text file.
 
+### [TypeScript](/Developer/typescript/node.js)
+This example uses [Node.js](https://nodejs.org/en/) and makes use of the *express* framework to receive a hosted feature service webhook payload and make additional authenticated requests to fetch the features that were edited. The results are printed to the console. 
+
 ### [Python](/Developer/python/flask)
 The Python module, Flask runs a webserver that can listen for GET and POST calls. This example writes the incoming payload to a text file.
 
