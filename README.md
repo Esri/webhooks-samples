@@ -29,6 +29,7 @@ The following receivers are grouped by programming language. The result of each 
 * [Webhook receiver via Java](/Developer/java)
 * [Webhook receiver via Azure](/Developer/azure/function.python) - Cloud-based receiver written in Python
 * [Webhook receiver via ArcGIS Notebook Server](/Developer/notebookserver)
+* [Feature Service webhook receiver via Node.js](Developer/typescript/node.js/)
 
 ### 3rd Party (Commercial) Receivers
 Many websites offer free, low cost or subscription-based services that you can quickly get started. We don't recommend one vendor over another; based on your business requirements you can evaluate each vendor and choose the one who best fits your needs. The following list represents just some of the 3rd party websites you can explore and leverage. For each of the providers below, we describe how to get started and provide samples or templates (if appropriate).
