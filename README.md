@@ -63,7 +63,7 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
 Find a bug? Does a sample require more information? Do you have another resource to suggest? Please let us know by submitting an [issue](https://github.com/Esri/webhooks-samples/issues).
 
 ## License
-Copyright 2019 - 2022 Esri
+Copyright 2019 - 2023 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

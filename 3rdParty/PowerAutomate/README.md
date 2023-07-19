@@ -11,14 +11,14 @@ Create a new flow.
 3. Click **Skip**
 4. From the search, enter `"http"`.
 5. From **Triggers** section, choose **When an HTTP request is received**
-6. Copy the [sample payload from below](#sample-payloads) for Portal or Feature Service webhooks and paste it into the **Request Body JSON Schema**.
+6. Copy the [sample payload from below](#sample-payloads) for Organization or Feature Service webhooks and paste it into the **Request Body JSON Schema**.
 7. Click the **+** button and choose and configure the next action(s) to complete your flow.
 8. Click **Save**.
 9. Copy the URL by clicking the paper icon beside the URL in the **When an HTTP request is received** connector. Use the URL to setup the webhook within ArcGIS Portal or ArcGIS Online Hosted Feature Services
 
 ### Quick Start - ArcGIS Online Hosted Feature Service
 
-The previous instructions are valid for both Hosted Feature Services and Portal webhooks. 
+The previous instructions are valid for both Hosted Feature Services and Organization webhooks. 
 
 A [Survey123](https://docs.microsoft.com/en-us/connectors/survey123/#when-a-survey-response-is-submitted) specific connector is available to quickly use in place of the **When an HTTP request is received** connector. When using this connectors, it will authenticate with ArcGIS Online and allow you to select the Hosted Feature Service you want to use in your workflow. The connector will automatically create the webhook on the service, allowing you to skip this ArcGIS.com configuration step.
   
@@ -26,9 +26,9 @@ A [Survey123](https://docs.microsoft.com/en-us/connectors/survey123/#when-a-surv
 
 ### Security and Secret Keys
 
-Both ArcGIS Online Feature Service and Portal webhooks have the ability to send a webhook payload with a known secret key. The receiver must be able to extract the secret key from the payload, compare the value to it's known key and decide if the incoming payload is trusted and proceed accordingly. 
+Both ArcGIS Online Feature Service and Organization webhooks have the ability to send a webhook payload with a known secret key. The receiver must be able to extract the secret key from the payload, compare the value to it's known key and decide if the incoming payload is trusted and proceed accordingly. 
 
-Portal webhooks make use of the `secret` parameter when setting up the hook. This value will be passed through HTTPS and can be read by the reciever within the incoming request's header. A simple comparison of the known secret key to the incoming secret value can be used to determine if the message can be trusted.
+Organization webhooks make use of the `secret` parameter when setting up the hook. This value will be passed through HTTPS and can be read by the reciever within the incoming request's header. A simple comparison of the known secret key to the incoming secret value can be used to determine if the message can be trusted.
 Make use of the following data operation's within Power Automate:
 * Initialize variable (Create a string variable `secretkey` and set the value to the same secret key used in the webhook)
 * Parse JSON (Headers content)
@@ -42,7 +42,7 @@ ArcGIS Online Feature Service webhooks make use of a Challenge-Response Checks t
 
 #### Sample Payloads
 
-**ArcGIS Portal webhooks schema**
+**ArcGIS Organization webhooks schema**
 ```json
 {
     "type": "object",
@@ -91,16 +91,7 @@ ArcGIS Online Feature Service webhooks make use of a Challenge-Response Checks t
                         "type": "object",
                         "properties": {}
                     }
-                },
-                "required": [
-                    "userId",
-                    "username",
-                    "when",
-                    "operation",
-                    "source",
-                    "id",
-                    "properties"
-                ]
+                }
             }
         }
     }
@@ -126,6 +117,91 @@ ArcGIS Online Feature Service webhooks make use of a Challenge-Response Checks t
         },
         "changesUrl": {
             "type": "string"
+        }
+    }
+}
+```
+
+**ArcGIS Enterprise Feature Service webhooks schema**
+```json
+{
+    "type": "object",
+    "properties": {
+        "serviceType": {
+            "type": "string"
+        },
+        "changesUrl": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "folderName": {
+            "type": "string"
+        },
+        "serviceName": {
+            "type": "string"
+        },
+        "events": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "eventType": {
+                        "type": "string"
+                    },
+                    "when": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+**ArcGIS Enterprise Geoprocessing Service webhooks schema**
+```json
+{
+    "type": "object",
+    "properties": {
+        "serviceType": {
+            "type": "string"
+        },
+        "jobId": {
+            "type": "string"
+        },
+        "statusURL": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "taskName": {
+            "type": "string"
+        },
+        "folderName": {
+            "type": "string"
+        },
+        "serviceName": {
+            "type": "string"
+        },
+        "events": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "eventType": {
+                        "type": "string"
+                    },
+                    "when": {
+                        "type": "integer"
+                    }
+                }
+            }
         }
     }
 }
