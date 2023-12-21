@@ -1,14 +1,15 @@
 # Getting started with Webhooks
-A webhook is generally regarded as an application that will send a notification when an event occurs. This is different from applications that must make a request and *ask* if an event has occurred. The difference is subtle, but the webhook scenario quickly notifies you instead of having your application constantly poll. In the ArcGIS world, webhooks are a powerful mechanism that facilitates automation by allowing discrete tasks to be chained together. Consider a classic business problem: I need to know when a new row is created in my table. Or, specifically, in the ArcGIS world: Send me an email when someone completes a survey. The classic polling scenario would require an individual to go and manually check a feature service or write a script to periodically query a RESTful service. Webhooks are the piece between the feature service action (new record) and the notification email, happening almost as soon as the new survey was submitted.
-Webhooks were first introduced to ArcGIS Survey123 in 2018, followed closely by ArcGIS Enterprise 10.7 with portal-level webhooks (item, user, group events) in 2019 and most recently, ArcGIS Online Hosted Feature Services introduced support in 2020. We plan on adding more webhook support within ArcGIS Enterprise in the near term.
+A webhook is generally regarded as an application that will send a notification when an event occurs. This is different from applications that must make a request and *ask* if an event has occurred. The difference is subtle, but the webhook scenario quickly notifies you instead of having your application constantly poll. In the ArcGIS world, webhooks are a powerful mechanism that facilitates automation by allowing discrete tasks to be chained together. Consider a classic business problem: I need to know when a new row is created in my table. Or, specifically, in the ArcGIS world: Send me an email when someone completes a survey. The classic polling scenario would require an individual to go and manually check a feature service or write a script to periodically query a RESTful service. Webhooks are the piece between the feature service action (new record) and the notification email, happening almost as soon as the new survey was submitted. The ArcGIS Architecture Center topic, [Understanding Webhooks](https://architecture.arcgis.com/en/framework/architecture-practices/integration/webhooks.html) does an incredible job explaining the concept of webhooks.
+Webhooks were first introduced to ArcGIS Survey123 in 2018, followed closely by ArcGIS Enterprise 10.7 with portal-level webhooks (item, user, group events) in 2019 and most recently, ArcGIS Online Hosted Feature Services introduced support in 2020. ArcGIS Enterprise 11.1 added support for both Feature and Geoprocessing Service webhooks.
 
-The best place to start learning about webhooks within ArcGIS products is the official help.
-* [ArcGIS Enterprise](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm)
+Follow the relevant help topic for the given technology as it relates to webhooks:
+* [ArcGIS Enterprise (Organization, Feature and Geoprocessing Service)](https://enterprise.arcgis.com/en/portal/latest/administer/windows/create-and-manage-webhooks.htm)
 * [ArcGIS Enterprise (REST)](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm)
 * [Survey123](https://doc.arcgis.com/en/survey123/browser/create-surveys/webhooks.htm)
 * [ArcGIS Online Hosted Feature Services](https://developers.arcgis.com/rest/services-reference/online/web-hooks-feature-service-.htm)
+* [Field Maps](https://doc.arcgis.com/en/field-maps/latest/prepare-maps/automate.htm)
 
-This repository will focus on the resources required to complete your automation using webhooks. Some consider implementing a webhook to be a "developer" task. Setting up a custom server to listen for webhook calls could  certainly be considered a developer task, however many websites offer low to no-code solutions that listen for webhook messages. If you're familiar with ModelBuilder or Visio, setting up a webhook on these websites will feel familiar. 
+This repository will focus on the resources required to complete your automation using webhooks. Some consider implementing a webhook to be a "developer" task. Setting up a custom server to listen for webhook calls could certainly be considered a developer task, however many websites offer low to no-code solutions that listen for webhook messages. If you're familiar with ModelBuilder or Visio, setting up a webhook on these websites will feel familiar. 
 
 # Samples to get you started
 Within this repository are starter samples. They have been grouped into [Developer](/Developer) and [3rd Party](/3rdParty). You'll probably choose a commercial vendor or custom solution based on your business requirements. If you are still in the testing or experimentation stage of webhook development, check the [developer readme](/Developer/README.md) for websites that offer quick, session-based receivers that listen for webhook payloads.
@@ -56,6 +57,10 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
 * [Use webhooks to automate workflows in ArcGIS Field Maps with Power Automate (Feature Service - blog)](https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/use-webhooks-to-automate-workflows-in-arcgis-field-maps-with-power-automate/)
 * [Create ArcGIS Workflow Manager Jobs Using Survey123 Webhooks (blog)](https://www.esri.com/arcgis-blog/products/workflow-manager/field-mobility/create-arcgis-workflow-manager-jobs-using-survey123-webhooks/)
 * [Use webhooks to automate workflows in ArcGIS Field Maps (Feature Service - blog)](https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/use-webhooks-to-automate-workflows-in-arcgis-field-maps/)
+* [Esri UC 2023 Technical Workshop Presentations (Power point PDFs)](https://registration.esri.com/flow/esri/23uc/uc-2023-ps/page/proceedings?search=webhook) (May require an ArcGIS public account login)
+* [Esri Developer Summit 2023 Technical Workshop Presentations (Power point PDFs)](https://registration.esri.com/flow/esri/23epcdev/devsummit-2023-ps/page/proceedings?search=webhooks) (May require an ArcGIS public account login)
+
+
 
 
 ## Issues
