@@ -46,10 +46,12 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
 * [Using an AWS Lambda function](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dev-summit-2019/) (Blog + Video)
 * [Slack bot notifies new items with incomplete metadata](/sample-workflows/slack)
 * [A Python Flask server to send emails](/sample-workflows/python-email)
+* [A Python Flask server that retrieves edit history from the feature service using the extract changes API](/sample-workflows/python-extract-changes/)
 * [Write payloads from an Azure Function to an Azure Table storage](/sample-workflows/azure-write-table)
  
 ## Resources
 
+* [Introduction to ArcGIS Enterprise webhooks](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/developers/introduction-to-arcgis-enterprise-webhooks/)
 * [Webhooks - Don't call us, we'll call you (ArcGIS Enterprise - blog)](https://www.esri.com/arcgis-blog/products/arcgis-enterprise/administration/webhooks-dont-call-us-well-call-you/)
 * [Using Webhooks in ArcGIS Enterprise (ArcGIS Enterprise - video)](https://www.esri.com/videos/watch?videoid=aX4VhaonTFg&title=using-webhooks-in-arcgis-enterprise)
 * [Create a hosted feature service webhook (ArcGIS Online - blog)](https://www.esri.com/arcgis-blog/products/arcgis-online/sharing-collaboration/how-to-create-a-hosted-feature-service-webhook/)
@@ -59,6 +61,7 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
 * [Use webhooks to automate workflows in ArcGIS Field Maps (Feature Service - blog)](https://www.esri.com/arcgis-blog/products/field-maps/field-mobility/use-webhooks-to-automate-workflows-in-arcgis-field-maps/)
 * [Esri UC 2023 Technical Workshop Presentations (Power point PDFs)](https://registration.esri.com/flow/esri/23uc/uc-2023-ps/page/proceedings?search=webhook) (May require an ArcGIS public account login)
 * [Esri Developer Summit 2023 Technical Workshop Presentations (Power point PDFs)](https://registration.esri.com/flow/esri/23epcdev/devsummit-2023-ps/page/proceedings?search=webhooks) (May require an ArcGIS public account login)
+* [Esri Developer Summit 2024 - Extending ArcGIS Enterprise with Webhooks (Technical workshop video)](https://mediaspace.esri.com/media/t/1_g5xh7rjp)
 
 
 

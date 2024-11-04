@@ -7,6 +7,7 @@ The samples listed here attempt to offer an almost complete workflow. With a few
 
 ### [Send payloads via email from a Python Flask server](/sample-workflows/python-email)
 
+### [Gather changes from the feature service using the extract changes API from a Python Flask server](/sample-workflows/python-extract-changes/)
 
 ### [Post item metadata to a Slack channel after parsing with the Python API](/sample-workflows/slack)
 
