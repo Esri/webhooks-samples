@@ -1,0 +1,97 @@
+[tool.poetry]
+name = "webhook-samples"
+version = "0.1.0"
+description = "Collection of webhook listener samples for ArcGIS services"
+authors = ["Esri <info@esri.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [{include = "Developer"}, {include = "sample-workflows"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+# Azure Function dependencies
+azure-functions = {version = "*", optional = true}
+azure-cosmosdb-table = {version = "*", optional = true}
+# Slack bot dependencies
+watchdog = {version = "*", optional = true}
+click = {version = "^6.6", optional = true}
+requests = {version = ">=2.20.0", optional = true}
+slackclient = {version = "^1.0.2", optional = true}
+websocket-client = {version = "^0.37.0", optional = true}
+# Flask dependencies
+flask = {version = "*", optional = true}
+
+[tool.poetry.extras]
+azure = ["azure-functions", "azure-cosmosdb-table"]
+slack = ["watchdog", "click", "requests", "slackclient", "websocket-client"]
+flask = ["flask", "requests"]
+all = ["azure-functions", "azure-cosmosdb-table", "watchdog", "click", "requests", "slackclient", "websocket-client", "flask"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.11.1"
+
+[tool.poetry.scripts]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--cov=Developer",
+    "--cov=sample-workflows",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-report=xml:coverage.xml",
+    "--cov-fail-under=80"
+]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "slow: Tests that take a long time to run"
+]
+
+[tool.coverage.run]
+source = ["Developer", "sample-workflows"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/venv/*",
+    "*/.venv/*",
+    "*/build/*",
+    "*/dist/*",
+    "*/.pytest_cache/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod"
+]
+show_missing = true
+precision = 2
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.xml]
+output = "coverage.xml"
