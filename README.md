@@ -40,6 +40,10 @@ Many websites offer free, low cost or subscription-based services that you can q
 * [Tray.IO](/3rdParty/Tray.IO)
 * [Zapier](/3rdParty/Zapier)
 
+### ArcGIS Notebook Server webhook receiver
+ArcGIS Enterprise 11.5 introduced [Notebook Server webhook receiver](https://enterprise.arcgis.com/en/notebook/11.5/administer/linux/automate-notebook-execution.htm#ESRI_SECTION1_AA2CB1134C294DDD830C28BA007DDB8A). This allows webhook payloads to be sent directly to Notebook Server, specifically a Notebook of Python code. The Notebook Server webhook receiver offers a commerical-like webhook receiver setup without having to manage a webserver, with the flexibility of a complete custom developer solution written in Python.
+* [Notebook Server webhook receiver](/Notebook/)
+
 
 ### Workflow samples
 Explore some of the more [complete "end to end" examples](/sample-workflows). These are a mix of 3rd party and custom solutions that might provide a jump start or just give you an idea on how to accomplish your task.
@@ -62,8 +66,7 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
 * [Esri UC 2023 Technical Workshop Presentations (Power point PDFs)](https://registration.esri.com/flow/esri/23uc/uc-2023-ps/page/proceedings?search=webhook) (May require an ArcGIS public account login)
 * [Esri Developer Summit 2023 Technical Workshop Presentations (Power point PDFs)](https://registration.esri.com/flow/esri/23epcdev/devsummit-2023-ps/page/proceedings?search=webhooks) (May require an ArcGIS public account login)
 * [Esri Developer Summit 2024 - Extending ArcGIS Enterprise with Webhooks (Technical workshop video)](https://mediaspace.esri.com/media/t/1_g5xh7rjp)
-
-
+* [Esri Developer Summit 2025 - Extending ArcGIS Enterprise with Webhooks (Technical workshop video)](https://mediaspace.esri.com/media/t/1_u21jwbf8/368599242)
 
 
 ## Issues
@@ -71,7 +74,7 @@ Explore some of the more [complete "end to end" examples](/sample-workflows). Th
 Find a bug? Does a sample require more information? Do you have another resource to suggest? Please let us know by submitting an [issue](https://github.com/Esri/webhooks-samples/issues).
 
 ## License
-Copyright 2019 - 2023 Esri
+Copyright 2019 - 2026 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
