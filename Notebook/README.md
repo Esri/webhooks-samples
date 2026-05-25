@@ -2,7 +2,7 @@
 
 ## Organization and Service webhooks to Notebook Server
 
-Both organization and service webhooks can be directed to ArcGIS Notebook Server. The incoming webhook message will ultimately trigger a Python notebook, in turn, running Python code. This pattern enjoys the benefits of leveraging the Notebook Server infrastructure with the flexibility of developer workflows, supported by the ArcGIS for Python API.
+Both organization and service webhooks can be directed to ArcGIS Notebook Server. The incoming webhook message will ultimately trigger a Python notebook, in turn, running Python code. This pattern enjoys the benefits of leveraging the Notebook Server infrastructure with the flexibility of developer workflows, supported by the ArcGIS API for Python.
 
 ### Notebook Server webhook receiver
 
@@ -18,7 +18,8 @@ The release of ArcGIS Notebook Server 11.5 introduced a webhook receiver. Webhoo
 
 The Python code will be triggered when the webhook payload is received by the webhook receiver. In most instances, the incoming payload will be a necessary part of the workflow; the code will act upon the information inside the payload. This payload is automatically injected into the Python notebook as a variable, `webhookPayload`. 
 
-[!NOTE] 11.5 - 12.0 requires loading the payload as JSON: `json.loads(webhookPayload)`. 12.1 and onwards the `webhookPayload` is injected into the Notebook as a JSON object.
+> [!NOTE]
+> 11.5 - 12.0 requires loading the payload as JSON: `json.loads(webhookPayload)`. 12.1 and onwards the `webhookPayload` is injected into the Notebook as a JSON object.
 
 The sample notebook, [Example_FS_ExtractChanges.ipynb](/Notebook/Example_FS_ExtractChanges.ipynb) demonstrates the use of the `webhookPayload` variable. In addition, the sample makes use of a `samplePayload`, a practice of capturing an example webhook payload and developing code against that. Prior to putting the Notebook code into production, the switch from `samplePayload` to `webhookPayload` is necessary.
 
