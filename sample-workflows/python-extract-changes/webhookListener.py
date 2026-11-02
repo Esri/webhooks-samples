@@ -53,4 +53,4 @@ if __name__ == "__main__":
 	# Certificate and key file. Cannot be self signed certs
 	context = ('ssl.cert', 'ssl.key')
 	# Listen on port 5000
-	app.run(host='0.0.0.0', port=5000, ssl_context=context, threaded=True, debug=True) 
+	app.run(host='0.0.0.0', port=5000, ssl_context=context, threaded=True) 

@@ -37,4 +37,4 @@ def index():
 
 if __name__ == "__main__":   
 	context = ('ssl.cert', 'ssl.key') # certificate and key file. Cannot be self signed certs    
-	app.run(host='0.0.0.0', port=5000, ssl_context=context, threaded=True, debug=True) # will listen on port 5000
+	app.run(host='0.0.0.0', port=5000, ssl_context=context, threaded=True) # will listen on port 5000
